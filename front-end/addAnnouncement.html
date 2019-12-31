@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>ADD Announcement</title>
+  <link rel="stylesheet" href="css/profileStyle.css">
+  <link rel="stylesheet" href="css/addResouceStyle.css">
+  <link href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
+
+  <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>-->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+</head>
+<body data-title="addAnnouncement">
+
+<div class="container">
+  <input data-function="swipe" id="swipe" type="checkbox">
+  <label data-function="swipe" for="swipe">&#xf057;</label>
+  <label data-function="swipe" for="swipe">&#xf0c9;</label>
+
+  <div class="headings">
+    <h1>ADD ANNOUNCEMENT INFORMATION</h1>
+    
+	<div class="container">
+	  <form>
+	  
+		<label for="title"><h2>Due Date</h2></label>
+		<input id="duedate" required="required" type="date" name="duedate"><br/><br/>
+
+		<label for="title"><h2>Grade ID</h2></label>
+		<input type="text" id="Gradeid" name="title" placeholder="1234">
+		
+		<label for="title"><h2>Section ID</h2></label>
+		<input type="text" id="Secid" name="title" placeholder="A">
+		
+		<label for="title"><h2>Subject ID</h2></label>
+		<input type="text" id="Subid" name="title" placeholder="ABC">
+		
+		<label for="title"><h2>Teacher ID</h2></label>
+		<input type="text" id="Teacherid" name="title" placeholder="56132">
+		
+		<label for="title"><h2>Title</h2></label>
+		<input type="text" id="Tid" name="title" placeholder="Hello World">
+		
+		<label for="marks"><h2>Marks</h2></label>
+		<input type="text" id="marks" name="marks" placeholder=" total marks">
+		
+		<label for="description"><h2>Description</h2></label>
+		<textarea id="description" name="description" placeholder="Write some description.." style="height:200px"></textarea>
+
+		<label for="title"><h2>Section</h2></label>
+		<input type="text" id="Section" name="title" placeholder="A">
+
+		<label for="grade"><h2>Grade</h2></label>
+		<select id="grade" name="grade">
+		 <option value="1">1</option>
+		  <option value="2">2</option>
+		  <option value="3">3</option>
+		  <option value="4">4</option>
+		</select>
+		
+		<label for="subject"><h2>Subject</h2></label>
+		<input type="text" id="subject" name="subject" placeholder="Maths">
+		
+		<label for="Suggestion"><h2>Suggestion</h2></label>
+		<input type="text" id="suggestion" name="Suggestion" placeholder="Good to do work">
+		
+		<!--Attachments-->
+		<input type="file" id="files" class="btn btn-secondary" name="files[]" multiple />
+        <output id="list"></output>
+		
+	<!--<input type="text" id="addAttachment" name="attachment" placeholder="...">
+	<label for="subject"><h2>Add Attachments</h2></label>
+		<button id="addFile" class="btn btn-secondary" type="button"><span>Add File</span></button>-->
+		<br/>
+		
+		<input id="submitResourse" type="submit" value="Submit">
+
+	  </form>
+	</div>
+ </div>
+
+
+  <div class="sidebar">
+    <nav class="menu">
+      <div class="menu">
+        <div class="menu">
+
+          <li class="item" id='profile'>
+            <a href="profile.html" class="btn"></i>Profile</a>
+          </li>
+
+          <li class="item" id="messages">
+              <a href="#messages" class="btn"></i>Announcement</a>
+              <div class="smenu">
+                <a href="#">Add Announcement</a>
+                <a href="myAnnouncement.html">My Announcement</a>
+              </div>
+          </li>
+
+          <li class="item" id="grade">
+            <a href="#grade" class="btn"></i>Grades</a>
+            <div class="smenu">
+                <a href="#">View Grade</a>
+            </div>
+          </li>
+
+          <li class="item" id="resources">
+            <a href="#resources" class="btn"></i>Resources</a>
+              <div class="smenu">
+				<a href="addResource.html">ADD Resources</a>
+                <a href="removeResource.html">REMOVE Resource</a>
+				<a href="updateResource.html">UPDATE Resource</a>
+              </div>
+          </li>
+		  
+		  <li class="item" id="library">
+            <a href="#library" class="btn"></i>Library</a>
+              <div class="smenu">
+                <a href="myLibrary.html">My Library</a>
+				<a href="Library.html">Library</a>
+				<a   href="simLibrary.html">resources</a>
+              </div>
+          </li>
+
+          <li class="item">
+            <a class="btn" href="Login-Registration.html"></i>Logout</a>
+          </li>
+
+      </div>
+    </nav>
+  </div>
+  
+</div>
+
+
+  <script src ="api.js"></script>
+
+</body>
+</html>

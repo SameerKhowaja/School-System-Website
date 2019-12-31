@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Recommendation Page</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7; IE=EmulateIE9">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+    <link rel="stylesheet" type="text/css" href="css/style1.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="css/demo1.css" media="all" />
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+  
+ 
+</head>
+<body data-title="recom" >
+<div class="container">
+            <div class="freshdesignweb-top">
+                <span class="right">
+                    <a href="index.html">
+                        <strong>Home Page</strong>
+                    </a>
+                </span>
+                <div class="clr"></div>
+            </div><!--/ freshdesignweb top bar -->
+			<header>
+				<h1><span>Welcome To</span>Institute Recommendation Page</h1>
+            </header>       
+      <div  class="form">
+    		<form style="max-width:80" id="contactform" class="form-group"> 
+    			<p class="contact"><label for="location">Location</label></p> 
+				<select id="loc" class="select-style gender" name="location">
+				<option value="Defence">Defence</option>
+				<option value="Saddar">Saddar</option>
+				<option value="Nazimabad">Nazimabad</option>
+				<option value="Gulshan">Gulshan</option>
+				<option value="Malir">Malir</option>
+				</select>
+				<br/><br/>
+    			 
+                <p class="contact"><label for="fees">Fees (PKR)</label></p> 
+    			<input id="fee" name="fees" placeholder="10000" required="" tabindex="2" type="text"> 
+    			 
+				<p class="contact"><label for="ground">Ground</label></p> 
+				<select id="ground" class="select-style gender" name="ground">
+				<option value="true">True</option>
+				<option value="false">False</option>
+				</select>
+				<br/><br/> 
+				
+				<p class="contact"><label for="library">Library</label></p> 
+				<select id="lib" class="select-style gender" name="library">
+				<option value="true">True</option>
+				<option value="false">False</option>
+				</select>
+				<br/><br/> 
+				
+				<p class="contact"><label for="phd_no">No. of PHDs</label></p> 
+    			<input id="phd" name="phds" placeholder="3" required="" tabindex="2" type="text"> 
+    			 
+				<input class="buttom" name="submit" id="submit" tabindex="5" value="Find Institute..." type="submit"> 	 
+				
+				
+				
+				
+
+				
+				
+				
+   </form> 
+   
+   
+   
+   
+   
+   		
+</div>      
+ <div style=" margin:auto" class="accordion"  id="main">
+  
+         </div>
+</div>
+
+<script src ="api.js"></script>
+</body>
+</html>

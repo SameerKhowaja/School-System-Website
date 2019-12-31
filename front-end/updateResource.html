@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>UPDATE Resource</title>
+  <link rel="stylesheet" href="css/profileStyle.css">
+  <link rel="stylesheet" href="css/addResouceStyle.css">
+  <link href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
+  <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>-->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+</head>
+<body data-title="updateResource" onload="myFunction()">
+<div class="container">
+  <input data-function="swipe" id="swipe" type="checkbox">
+  <label data-function="swipe" for="swipe">&#xf057;</label>
+  <label data-function="swipe" for="swipe">&#xf0c9;</label>
+
+  <div class="headings">
+    <h1>UPDATE RESOURCES INFORMATION</h1>
+    
+	<div class="container">
+	  <form>
+
+		<label for="title"><h2>ID</h2></label>
+		<input type="text" id="id" name="title" placeholder="Hello World">
+		
+		<label for="title"><h2>Title</h2></label>
+		<input type="text" id="tite_id" name="title" placeholder="Hello World">
+		
+		<label for="description"><h2>Description</h2></label>
+		<textarea id="description" name="description" placeholder="Write some description.." style="height:200px"></textarea>
+
+		<label for="grade"><h2>Grade</h2></label>
+		<select id="grade" name="grade">
+		  <option value="1">1</option>
+		  <option value="2">2</option>
+		  <option value="3">3</option>
+		  <option value="4">4</option>
+		</select>
+		
+		<label for="subject"><h2>Subject</h2></label>
+		<input type="text" id="subject" name="subject" placeholder="Maths">
+		
+		<label for="teacher_id"><h2>Teacher Id</h2></label>
+		<input type="text" id="teacher_id" name="teacher_id" placeholder="1234">
+
+		<label for="author"><h2>Author</h2></label>
+		<input type="text" id="author" name="author" placeholder="Albert">
+		
+		<!--Attachments-->
+		<h2>Select your Category for Attachment</h2>
+		<select class="form-text" id="val_equipfc" required="required" name="val_equipfc" onChange="check(this)" required>
+			<option value="null"></option>
+			<option value="attach">Add Attachments</option>
+			<option value="url">Add URL</option>
+			</select>
+		<span class="bar"></span>
+		
+		<input type="text" id="addAttachment" name="attachment" placeholder="...">
+		<input type="file" id="files" class="btn btn-secondary" name="files[]" multiple />
+        <output id="list"></output>
+	<!--	<button id="addFile" class="btn btn-secondary" type="button"><span>Add File</span></button>-
+		<button id="addURL" class="btn btn-secondary" type="button"><span>Add URL</span></button>-->
+		<br/>
+		
+		<label for="time"><h2>Choose Time</h2></label>
+		<input type="time" id="time" name="time" min="00:01" max="23:59" required>
+		
+		<label for="archieve"><h2>Is Archieve</h2></label>
+		<input type="text" id="is_archive" name="is_archive" placeholder="Yes/No">
+		
+		<input id="submitResourse" type="submit" value="Submit">
+
+	  </form>
+	</div>
+ </div>
+  
+  
+ <!-- Scrip for select menu -->
+<script type="text/javascript">
+	function check(obj) {
+		var input2 = document.getElementById("addAttachment");
+		var input3 = document.getElementById("files");
+		//var input4 = document.getElementById("addURL");
+		var input5 = document.getElementById("list");
+
+		if(obj.value == "attach"){
+		    input2.style.visibility = "hidden"; 
+			input3.style.visibility = "visible";
+			//input4.style.visibility = "hidden";
+			input5.style.visibility = "visible";
+		}
+		
+		if(obj.value == "url"){
+		    input2.style.visibility = "visible"; 
+			input3.style.visibility = "hidden";
+		    // input4.style.visibility = "visible"; 
+			 input5.style.visibility = "hidden";
+		}	
+		
+		if(obj.value == "null"){
+		    input2.style.visibility = "hidden"; 
+			input3.style.visibility = "hidden";
+			//input4.style.visibility = "hidden";
+			input5.style.visibility = "hidden";
+		}
+	}
+	
+	
+	function myFunction() {
+		var input2 = document.getElementById("addAttachment");
+		var input3 = document.getElementById("files");
+		//var input4 = document.getElementById("addURL");
+		var input5 = document.getElementById("list");
+		
+		input2.style.visibility = "hidden"; 
+		input3.style.visibility = "hidden";
+		//input4.style.visibility = "hidden";
+		input5.style.visibility = "hidden";
+ }
+ 
+ 
+ 
+</script>
+
+
+
+  <div class="sidebar">
+    <nav class="menu">
+      <div class="menu">
+        <div class="menu">
+
+          <li class="item" id='profile'>
+            <a href="profile.html" class="btn"></i>Profile</a>
+          </li>
+
+          <li class="item" id="messages">
+              <a href="#messages" class="btn"></i>Announcement</a>
+              <div class="smenu">
+                <a href="addAnnouncement.html">Add Announcement</a>
+                <a href="myAnnouncement.html">My Announcement</a>
+              </div>
+          </li>
+
+          <li class="item" id="grade">
+            <a href="#grade" class="btn"></i>Grades</a>
+            <div class="smenu">
+                <a href="#">View Grade</a>
+            </div>
+          </li>
+
+          <li class="item" id="resources">
+            <a href="#resources" class="btn"></i>Resources</a>
+              <div class="smenu">
+				<a href="addResource.html">ADD Resources</a>
+                <a href="removeResource.html">REMOVE Resource</a>
+				<a href="#">UPDATE Resource</a>
+              </div>
+          </li>
+		  
+		  <li class="item" id="library">
+            <a href="#library" class="btn"></i>Library</a>
+              <div class="smenu">
+                <a href="myLibrary.html">My Library</a>
+				<a href="Library.html">Library</a>
+				<a   href="simLibrary.html">resources</a>
+				
+              </div>
+          </li>
+
+          <li class="item">
+            <a class="btn" href="Login-Registration.html"></i>Logout</a>
+          </li>
+
+      </div>
+    </nav>
+  </div>
+  
+</div>
+
+  
+  <script src ="api.js"></script>
+  
+</body>
+</html>

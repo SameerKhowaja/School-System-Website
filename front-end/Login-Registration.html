@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Login and Registration Form</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta name="description" content="Login and Registration Form with HTML5 and CSS3" />
+        <meta name="keywords" content="html5, css3, form, switch, animation, :target, pseudo-class" />
+        <meta name="author" content="Codrops" />
+        <!--<link rel="shortcut icon" href="../favicon.ico">  -->
+        <link rel="stylesheet" type="text/css" href="css/demo.css" />
+        <link rel="stylesheet" type="text/css" href="css/style2.css" />
+		<link rel="stylesheet" type="text/css" href="css/animate-custom.css" />
+		
+		 <!-- Bootstrap core CSS -->
+		  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		  
+		  <!-- Custom fonts for this template -->
+		  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+		  <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css">
+		  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+		  <!-- Custom styles for this template -->
+		  <link href="css/landing-page.min.css" rel="stylesheet">
+		  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+					
+    </head>
+    <body data-title="login_page">
+		<!-- Navigation -->
+		  <nav class="navbar navbar-light bg-light static-top">
+			<div class="container">
+			  <a class="navbar-brand" href="#">Login and Registration Form</a>
+			<form action="index.html">
+				<input class="btn btn-primary" type="submit" value="Home Page" />
+			</form>
+			</div>
+		  </nav>
+	
+	
+        <div class="container">
+            
+            <header>
+				
+            </header>
+            <section>				
+                <div id="container_demo" >
+                    <a class="hiddenanchor" id="toregister"></a>
+                    <a class="hiddenanchor" id="tologin"></a>
+                    <div id="wrapper">
+                        <div id="login" class="animate form">
+                            <form  autocomplete="on"  > 
+                                <h1>Log in</h1>
+                                <p> 
+                                    <label for="username" class="uname" >CNIC</label>
+                                    <input id="username" name="username" required="required" type="text" placeholder="CNIC"/>
+                                </p>
+                                <p> 
+                                    <label for="password" class="youpasswd" > Password </label>
+                                    <input id="password" name="password" required="required" type="password" placeholder="eg. X8df!90EO" /> 
+                                </p>
+								
+								<p>Please select your Category:
+								<select id="type_login" required="required">
+								  <option></option>
+								  <option value="parent">Guardian/Parent</option>
+								  <option value="teacher">Teacher/Faculty</option>
+								  <option value="student">Student</option>
+								  <option value="admin">Administrator</option>
+								</select>
+								</p>
+								
+								
+                                <p class="login button"> 
+                                    <input  id="log_in" type="submit"  /> 
+								</p>
+                                <p class="change_link">
+									Not a member yet ?
+									<a href="#toregister" class="to_register">Sign Up</a>
+								</p>
+                            </form>
+                        </div>
+
+                        <div id="register" class="animate form">
+                            <form   autocomplete="on" > 
+                                <h1> Sign up </h1> 
+								
+								<p>Please select your Category:</p>
+								<div class="form-group form-animate-text col-lg-6 col-xs-12 col-md-6">
+									<select class="form-text" id="val_equipfc" required="required" name="val_equipfc" onChange="checkOption(this)" required>
+										<option value="null"></option>
+										<option value="parent">Guardian/Parent</option>
+										<option value="teacher">Teacher/Faculty</option>
+										<option value="student">Student</option>
+									</select>
+									<span class="bar"></span>
+								</div>
+								
+							
+                                <p> 
+                                    <label for="usernamesignup" class="uname" >Your username</label>
+                                    <input id="usernamesignup" name="usernamesignup" required="required" type="text" placeholder="mysuperusername690" />
+                                </p>
+								<p> 
+                                    <label id="guardiannamesignupSub" for="usernamesignup" class="uname" >Your Guardian/Parent Name</label>
+                                    <input id="guardiannamesignup" name="usernamesignup" required="required" type="text" placeholder="mysuperguardian096" />
+                                </p>
+								<p> 
+									<label id="nicsignupSub" for="usernamesignup" class="uname" >Your CNIC Number</label>
+									<input id="nicsignup" name="usernamesignup" required="required" type="text" placeholder="4130329364551" />
+								</p>
+								<p> 
+									<label id="guardiannicsignupSub" for="usernamesignup" class="uname" >Your Guardian/Parent CNIC Number</label>
+									<input id="guardiannicsignup" name="usernamesignup" required="required" type="text" placeholder="4130394837712" />
+								</p>
+								<p> 
+									<label for="usernamesignup" class="uname" >Your Address</label>
+									<input id="addresssignup" name="usernamesignup" required="required" type="text" placeholder="mysuperuseraddress, nearsuperuseraddress" />
+								</p>
+								<p> 
+									<label for="usernamesignup" class="uname" >Your Phone Number</label>
+									<input id="phonesignup" name="usernamesignup" required="required" type="text" placeholder="03332211340" />
+								</p>
+								<p> 
+                                    <label id="guardianphonesignupSub" for="usernamesignup" class="uname" >Your Guardian/Parent Phone Number</label>
+                                    <input id="guardianphonesignup" name="usernamesignup" required="required" type="text" placeholder="03133822890" />
+                                </p>
+								<p> 
+									<label for="usernamesignup" class="uname" >Your Date of Birth</label>
+									<input id="dobsignup" required="required" type="date" name="bday">
+								</p>
+								<p> 
+                                    <label for="emailsignup" class="youmail" > Your email</label>
+                                    <input id="emailsignup" name="emailsignup" required="required" type="email" placeholder="mysupermail@mail.com"/> 
+                                </p>
+                                <p> 
+                                    <label id="guardianemailsignupSub" for="emailsignup" class="youmail" > Your Guardian/Parent email</label>
+                                    <input id="guardianemailsignup" name="emailsignup" required="required" type="email" placeholder="mysuperguardianmail@mail.com"/> 
+                                </p>
+								<p> 
+									<label id="qualificationsignupSub" for="usernamesignup" class="uname" >Your Qualification</label>
+									<input id="qualificationsignup" name="usernamesignup" required="required" type="text" placeholder="master, phd, etc" />
+								</p>
+                                <p> 
+                                    <label for="passwordsignup" class="youpasswd" >Your password </label>
+                                    <input id="passwordsignup" name="passwordsignup" required="required" type="password" placeholder="eg. X8df!90EO"/>
+                                </p>
+                                <p> 
+                                    <label for="passwordsignup_confirm" class="youpasswd" >Please confirm your password </label>
+                                    <input id="passwordsignup_confirm" name="passwordsignup_confirm" required="required" type="password" placeholder="eg. X8df!90EO"/>
+                                </p>
+                                <p class="signin button"> 
+									<input id ="sign_up" type="submit" value="Sign up"/> 
+								</p>
+								
+								<!-- Scrip for select menu -->
+								<script type="text/javascript">
+									function checkOption(obj) {
+										var input1 = document.getElementById("guardiannamesignup");
+										var input11 = document.getElementById("guardiannamesignupSub");
+										var input2 = document.getElementById("guardiannicsignup");
+										var input22 = document.getElementById("guardiannicsignupSub");
+										var input3 = document.getElementById("guardianphonesignup");
+										var input33 = document.getElementById("guardianphonesignupSub");
+										var input4 = document.getElementById("guardianemailsignup");
+										var input44 = document.getElementById("guardianemailsignupSub");
+										var input5 = document.getElementById("qualificationsignup");
+										var input55 = document.getElementById("qualificationsignupSub");
+										var input6 = document.getElementById("nicsignup");
+										var input66 = document.getElementById("nicsignupSub");
+										//input1.disabled = input2.disabled = input3.disabled = input4.disabled = input5.disabled = obj.value == "guardian";
+										
+										if(obj.value == "null"){
+											input1.hidden = input2.hidden = input3.hidden = input4.hidden = input5.hidden = input6.hidden = false;
+											input11.hidden = input22.hidden = input33.hidden = input44.hidden = input55.hidden = input66.hidden = false;
+										}
+										if(obj.value == "parent"){
+											input1.hidden = input2.hidden = input3.hidden = input4.hidden = input5.hidden = obj.value == "parent";
+											input6.hidden = false;
+											input11.hidden = input22.hidden = input33.hidden = input44.hidden = input55.hidden = obj.value == "parent";
+											input66.hidden = false;
+										}
+										if(obj.value == "teacher"){
+											input1.hidden = input2.hidden = input3.hidden = input4.hidden = obj.value == "teacher";
+											input5.hidden = input6.hidden = false;
+											input11.hidden = input22.hidden = input33.hidden = input44.hidden = obj.value == "teacher";
+											input55.hidden = input66.hidden = false;
+											
+											input1.required = input2.required = input3.required= input4.required = "";
+											input5.required = input6.required = "required";
+											input11.required = input22.required = input33.required = input44.required = "";
+											input55.required= input66.required = "required";
+											
+											
+											
+											 
+										}
+										if(obj.value == "student"){
+											input1.hidden = input2.hidden = input3.hidden = input4.hidden = input5.hidden =false;
+											input5.hidden = obj.value == "student";
+											input11.hidden = input22.hidden = input33.hidden = input44.hidden = input55.hidden  = false;
+											 input55.hidden = obj.value == "student";
+										}
+									}
+								</script>
+								
+								
+                                <p class="change_link">  
+									Already a member ?
+									<a  href="#tologin" class="to_register"> Go and log in </a>
+								</p>
+                            </form>
+                        </div>
+						
+                    </div>
+                </div>  
+            </section>
+        </div>
+		<script src="api.js"></script>
+    </body>
+</html>
